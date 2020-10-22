@@ -15,6 +15,27 @@
             "platform.stdio-baud-rate": 115200,
             "platform.default-serial-baud-rate": 115200,
             "platform.stdio-buffered-serial": true
+        },
+        "NUCLEO_F429ZI": {
+            "target.network-default-interface-type": "CELLULAR",
+            "mbed-trace.enable": true,
+            "lwip.ipv4-enabled": true,
+            "ppp.ipv4-enabled": true,
+            "lwip.ipv6-enabled": true,
+            "ppp.ipv6-enabled": true,
+            "lwip.ethernet-enabled": false,
+            "lwip.ppp-enabled": true,
+            "lwip.tcp-enabled": true,
+            "cellular.debug-at": false,
+            "cellular.use-apn-lookup": true,
+            "nsapi.default-cellular-sim-pin": null,
+            "nsapi.default-cellular-plmn": null,
+            "nsapi.default-cellular-apn": "\"zonginternet\"",
+            "nsapi.default-cellular-username": null,
+            "nsapi.default-cellular-password": null,
+            "GENERIC_AT3GPP.provide-default": true,
+            "GENERIC_AT3GPP.tx": "PD_5",
+            "GENERIC_AT3GPP.rx": "PD_6"
         }
     }
 }
