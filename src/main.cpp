@@ -8,6 +8,7 @@
 #include "mbed-trace/mbed_trace.h"
 #include "Utils/Utils.h"
 #include "Network/Network.h"
+#include "HTTPClient/HTTPClient.h"
 
 NetworkInterface* net;
 Network nwk;
@@ -30,7 +31,13 @@ int main() {
         LOG_INFO("Connected");
     }
 
-    nwk.disconnect();
+    HTTPClient _client;
+    int status = _client.getRequest(net, "http://httpbin.org/status/418");
+    LOG_DEBUG("Status code for Get Request: %d", status);
+
+    if (nwk.disconnect() == NSAPI_ERROR_OK) {
+        LOG_DEBUG("Disconnected");
+    }
 
     return 0;
 }

@@ -239,7 +239,7 @@ pip-selfcheck.json
 *.code-workspace
 
 ### Mbed OS ###
-mbed-os/*
+mbed-os/
 BUILD/*
 
 # End of https://www.toptal.com/developers/gitignore/api/c++,c,python,venv,virtualenv,vscode
